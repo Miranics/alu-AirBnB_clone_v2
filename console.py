@@ -398,4 +398,4 @@ if __name__ == "__main__":
     the remainder of the line as argument.
     (see: https://github.com/python/cpython/blob/3.8/Lib/cmd.py#L98)
     """
-    HBNBCommand().cmdloop()
+    HBNBCommand().cmdloop() 
