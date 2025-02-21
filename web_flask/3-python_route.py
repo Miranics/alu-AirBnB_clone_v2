@@ -2,43 +2,43 @@
 """Web App"""
 
 from flask import Flask
+
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello():
     """
-        Return: string when route queried
+    Return: string when route queried
     """
-    return 'Hello HBNB!'
+    return "Hello HBNB!"
 
 
-@app.route('/hbnb')
+@app.route("/hbnb")
 def hbnb():
     """
-        Return: string when route queried
+    Return: string when route queried
     """
-    return 'HBNB'
+    return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route("/c/<text>")
 def c_is_fun(text):
     """
-        Return: reformatted text
+    Return: reformatted text
     """
-    return 'C ' + text.replace('_', ' ')
+    return "C " + text.replace("_", " ")
 
 
-@app.route('/python/')
-@app.route('/python/<text>')
-def python_with_text(text='is cool'):
+@app.route("/python/")
+@app.route("/python/<text>")
+def python_with_text(text="is cool"):
     """
-        Return: formatted text based on optional variable
+    Return: formatted text based on optional variable
     """
-    return 'Python ' + text.replace('_', ' ')
+    return "Python " + text.replace("_", " ")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.url_map.strict_slashes = False
-    app.run(host='0.0.0.0', port=5000)
-    
+    app.run(host="0.0.0.0", port=5000)

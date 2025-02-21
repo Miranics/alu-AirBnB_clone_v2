@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_hbnb():
-    """ Display Hello HBNB! """
+    """Display Hello HBNB!"""
     return "Hello HBNB!"
 
 
 @app.route("/hbnb")
 def hbnb():
-    """ Display HBNB! """
+    """Display HBNB!"""
     return "HBNB"
 
 
@@ -49,10 +49,9 @@ def number_template(n):
     """
     Display a HTML page only if n is an integer
     """
-    return render_template('5-number.html', n=n)
+    return render_template("5-number.html", n=n)
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
     app.url_map.strict_slashes = False
-    
